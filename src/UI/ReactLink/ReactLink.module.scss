@@ -1,0 +1,16 @@
+.link {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 35px;
+  letter-spacing: 0.035em;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  &:hover {
+    color: #ffffff;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}

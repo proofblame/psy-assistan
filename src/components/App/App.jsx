@@ -1,11 +1,12 @@
-import style from './App.module.scss'
+import Button from '../../UI/Button/Button';
+
 function App() {
   return (
-    <div className={style.app}>
-      <h1 className={style.app__title}>Привет</h1>
-      {/* <p className="app__subtitle">Подзаголовок</p>
-      <a href="#" className="app__link">ссылка</a> */}
-    </div>
+    <>
+      <Button
+        className="light"
+      >Хочу обсудить свою ситуацию</Button>
+    </>
   );
 }
 

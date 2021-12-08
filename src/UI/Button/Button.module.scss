@@ -1,0 +1,55 @@
+.button {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 40px 55px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 37px;
+  letter-spacing: 0.105em;
+}
+.light {
+  $color: #98c1c5;
+  $reverceColor: #2b6684;
+  $activeColor: #032e42;
+  $disabledColor: rgba(152, 193, 197, 0.6);
+
+  color: $reverceColor;
+  background: $color;
+  border: 3px solid $color;
+  &:hover {
+    background: $reverceColor;
+    color: $color;
+  }
+  &:active {
+    background: $activeColor;
+    border-color: $activeColor;
+    color: $reverceColor;
+  }
+  &:disabled {
+    color: $disabledColor;
+  }
+}
+.dark {
+  $color: #2b6684;
+  $reverceColor: #ffffff;
+  $activeColor: #032e42;
+  $disabledColor: rgba(43, 102, 132, 0.6);
+
+  color: $reverceColor;
+  background: $color;
+  border: 3px solid $color;
+  &:hover {
+    background: $reverceColor;
+    color: $color;
+  }
+  &:active {
+    background: $activeColor;
+    border-color: $activeColor;
+    color: $reverceColor;
+  }
+  &:disabled {
+    color: $disabledColor;
+  }
+}
