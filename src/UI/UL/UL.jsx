@@ -1,14 +1,15 @@
 import classNames from 'classnames';
 import style from './UL.module.scss';
 
-const List = ({ children }) => {
-  // const classes = classNames(style.list, style[className]);
+const List = ({ children, className, classList }) => {
+  const classes = classNames(style.list, style[className]);
+  const listClasses = classNames(style.list__item, style[classList]);
   return (
     <>
-      <ul className={style.list}>
+      <ul className={classes}>
         {children.map((l) => {
           return (
-            <li className={style.list__item} key={l.id}>
+            <li className={listClasses} key={l.id}>
               {l.text}
             </li>
           );

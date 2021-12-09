@@ -1,12 +1,14 @@
 .list {
   height: 216px;
   width: 824px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+
+  &__separated {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 
   &__item {
-    display: inline;
     padding-left: calc(77px + 17px + 18px);
     margin-bottom: 30px;
     position: relative;
@@ -30,15 +32,17 @@
       left: 77px;
     }
 
-    &:nth-child(4) {
-      margin-bottom: 0;
-    }
+    &_separated {
+      &:nth-child(4) {
+        margin-bottom: 0;
+      }
 
-    &:nth-child(n + 5) {
-      padding-left: 57px;
+      &:nth-child(n + 5) {
+        padding-left: 57px;
 
-      &::before {
-        left: 20px;
+        &::before {
+          left: 20px;
+        }
       }
     }
   }

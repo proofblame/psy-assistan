@@ -19,7 +19,11 @@ function App() {
       <div className={style.wrapper}>
         <Container className={'container'}>
           <H3 className='header'>На какую тему вы хотели бы поговорить?</H3>
-          <UL children={list} className='list__item' />
+          <UL
+            children={list}
+            className='list__separated'
+            classList='list__item_separated'
+          />
         </Container>
       </div>
     </div>
