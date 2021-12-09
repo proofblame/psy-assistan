@@ -1,0 +1,8 @@
+@import '../../variables/variables.scss';
+
+:root {
+  @extend %fonts;
+}
+._important {
+  color: $mainColor;
+}

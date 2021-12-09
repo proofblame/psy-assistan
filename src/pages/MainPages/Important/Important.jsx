@@ -1,10 +1,18 @@
 
-import Container from '../../../UI/Container/Container'
+import style from './Important.module.scss'
+
 const Important = () => {
   return (
-    <Container className="_1155">
-      Что есть рекурсия?
-    </Container>
+    <div className={style.wrapper}>
+      <p>
+        Важно!
+      </p>
+      <p>
+        "Psy-assistant" — это не скорая психологическая помощь.
+        Если у вас серьезные, угрожающие вашей жизни проблемы, которые требуют немедленного решения,
+        вам лучше обратиться в какую-либо из этих организаций.
+      </p>
+    </div>
   )
 }
 

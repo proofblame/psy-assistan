@@ -1,1 +1,20 @@
+@import '../mixins/mixins.scss';
+
+$fontFamily: 'Montserrat', sans-serif;
+
 $mainColor: #2b6684;
+$secondaryColor: #98c1c5;
+
+%fonts {
+  font-family: $fontFamily;
+  font-style: normal;
+}
+
+%fz-64 {
+  @include adaptive(font-size, 64, 24);
+  @include adaptive(line-height, 64, 24);
+}
+%fz-24 {
+  @include adaptive(font-size, 24, 12);
+  @include adaptive(line-height, 27, 13);
+}
