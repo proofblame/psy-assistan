@@ -4,8 +4,11 @@ import Statistics from './Statistics/Statistics'
 
 const MainPages = () => {
   return (
-    // <Important />
-    <Statistics />
+    <>
+      <Statistics />
+      <Important />
+    </>
+
   )
 }
 

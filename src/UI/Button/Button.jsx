@@ -9,6 +9,7 @@ const Button = ({
     if (disabled) {
       e.preventDefault()
     } else {
+      e.preventDefault()
       return onClick(e)
     }
   }

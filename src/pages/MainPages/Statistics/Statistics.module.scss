@@ -1,6 +1,38 @@
+@import '../../../variables/variables.scss';
+
 .section {
+  @extend %fonts;
 }
 .wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: $mainColor;
+  flex-direction: column;
+  @extend %flex;
+  @include adaptive(row-gap, 170, 50);
+  @include adaptivePadding(padding, 150, 0, 50, 0);
 }
 .subwrapper {
+  font-weight: 600;
+  width: 100%;
+  row-gap: 14px;
+  @extend %flex;
+  @include adaptive(column-gap, 51, 0);
+  @media screen and (max-width: $_768) {
+    flex-direction: column;
+  }
+}
+.title {
+  color: $secondaryColor;
+  @extend %fz-96;
+}
+.text {
+  @extend %fz-36;
+  @media screen and (max-width: $_768) {
+    text-align: center;
+  }
+}
+.img {
+  @include adaptive(width, 510, 221);
 }

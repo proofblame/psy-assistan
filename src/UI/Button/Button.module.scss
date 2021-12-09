@@ -1,13 +1,15 @@
+@import '../../variables/variables.scss';
+
 .button {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: bold;
-  border-radius: 10px;
-  padding: 40px 55px;
   cursor: pointer;
-  font-size: 24px;
-  line-height: 37px;
   letter-spacing: 0.105em;
+  @include adaptivePadding(padding, 40, 55, 14, 20);
+  @include adaptive(border-radius, 10, 5);
+  @extend %fz-button;
+  transition: color 0.2s linear, background-color 0.2s linear;
 }
 ._light {
   $color: #98c1c5;
@@ -40,6 +42,7 @@
   color: $reverceColor;
   background: $color;
   border: 3px solid $color;
+
   &:hover {
     background: $reverceColor;
     color: $color;

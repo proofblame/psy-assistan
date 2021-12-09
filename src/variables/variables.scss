@@ -13,13 +13,31 @@ $reasonsListSize: 1479px;
   font-style: normal;
 }
 
+%fz-96 {
+  @include adaptive(font-size, 96, 48);
+  @include adaptive(line-height, 107, 54);
+}
 %fz-64 {
   @include adaptive(font-size, 64, 24);
   @include adaptive(line-height, 64, 24);
 }
+%fz-36 {
+  @include adaptive(font-size, 36, 18);
+  @include adaptive(line-height, 36, 18);
+}
 %fz-24 {
   @include adaptive(font-size, 24, 12);
   @include adaptive(line-height, 27, 13);
+}
+%fz-button {
+  @include adaptive(font-size, 24, 10);
+  @include adaptive(line-height, 37, 15);
+}
+
+%flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 %speakingListSize {
