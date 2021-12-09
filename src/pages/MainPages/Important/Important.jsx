@@ -1,15 +1,15 @@
 import Container from '../../../UI/Container/Container'
-import style from './Important.module.scss'
+import important from './Important.module.scss'
 
 const Important = () => {
   return (
-    <section className={style.section}>
+    <section className={important.section}>
       <Container>
-        <div className={style.wrapper}>
-          <p className={style.title}>
+        <div className={important.wrapper}>
+          <p className={important.title}>
             Важно!
           </p>
-          <p className={style.text}>
+          <p className={important.text}>
             "Psy-assistant" — это не скорая психологическая помощь.
             Если у вас серьезные, угрожающие вашей жизни проблемы, которые требуют немедленного решения,
             вам лучше обратиться в какую-либо из этих организаций.

@@ -11,10 +11,24 @@
   max-width: 1155px;
   margin: 0 auto;
   color: $mainColor;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include adaptive(column-gap, 102, 0);
+  @include adaptivePadding(padding, 150, 0, 50, 0);
+  @media screen and (max-width: $_768) {
+    flex-direction: column;
+    row-gap: 30px;
+  }
 }
 .title {
   @extend %fz-64;
+  font-weight: 600;
 }
 .text {
   @extend %fz-24;
+  @media screen and (max-width: $_768) {
+    text-align: center;
+  }
 }

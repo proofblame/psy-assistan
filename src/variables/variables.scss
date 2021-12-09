@@ -5,6 +5,8 @@ $fontFamily: 'Montserrat', sans-serif;
 $mainColor: #2b6684;
 $secondaryColor: #98c1c5;
 
+$_768: 767.98px;
+
 %fonts {
   font-family: $fontFamily;
   font-style: normal;
@@ -18,3 +20,8 @@ $secondaryColor: #98c1c5;
   @include adaptive(font-size, 24, 12);
   @include adaptive(line-height, 27, 13);
 }
+
+// Шаблоный брейкпоинтов
+
+//  768px
+// @media screen and (max-width: $_768) {}
