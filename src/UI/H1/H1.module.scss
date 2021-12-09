@@ -1,3 +1,5 @@
+@import '../../variables/variables.scss';
+
 .mainHeader {
   width: 862px;
   font-family: Montserrat;
@@ -10,5 +12,5 @@
 }
 
 .main {
-  color: #2b6684;
+  color: $mainColor;
 }
