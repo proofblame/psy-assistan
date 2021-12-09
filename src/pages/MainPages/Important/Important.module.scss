@@ -1,12 +1,12 @@
 @import '../../../variables/variables.scss';
 
 .section {
+  @extend %fonts;
   width: 100%;
   background: #f6f6f6;
 }
 
 .wrapper {
-  @extend %fonts;
   width: 100%;
   max-width: 1155px;
   margin: 0 auto;
