@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import style from './UL.module.scss';
 import Li from './Li/Li';
 
-const UL = ({ children, isArray = false, className, classList }) => {
+const UL = ({ children, isArray = false, className }) => {
   const classes = classNames(style.list, style[className]);
   return (
     <>
@@ -16,9 +16,7 @@ const UL = ({ children, isArray = false, className, classList }) => {
             );
           })
         ) : (
-          <>
-            <Li>{children}</Li>
-          </>
+          <>{children}</>
         )}
       </ul>
     </>

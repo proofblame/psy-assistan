@@ -1,7 +1,12 @@
-.list {
-  height: 216px;
-  width: 824px;
+@import '../../variables/variables.scss';
+@import '../../mixins/mixins.scss';
 
+.list {
+  list-style-type: none;
+
+  &__speaking {
+    width: $reasonsListSize;
+  }
   &__separated {
     display: flex;
     flex-direction: column;

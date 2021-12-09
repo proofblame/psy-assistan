@@ -6,6 +6,7 @@ $mainColor: #2b6684;
 $secondaryColor: #98c1c5;
 
 $_768: 767.98px;
+$reasonsListSize: 1479px;
 
 %fonts {
   font-family: $fontFamily;
@@ -19,6 +20,11 @@ $_768: 767.98px;
 %fz-24 {
   @include adaptive(font-size, 24, 12);
   @include adaptive(line-height, 27, 13);
+}
+
+%speakingListSize {
+  height: 216px;
+  width: 824px;
 }
 
 // Шаблоный брейкпоинтов
