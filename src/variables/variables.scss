@@ -21,6 +21,12 @@ $reasonsListSize: 1479px;
   @include adaptive(font-size, 64, 24);
   @include adaptive(line-height, 64, 24);
 }
+
+%fz-64-18 {
+  @include adaptive(font-size, 64, 18);
+  @include adaptive(line-height, 64, 18);
+}
+
 %fz-36 {
   @include adaptive(font-size, 36, 18);
   @include adaptive(line-height, 36, 18);

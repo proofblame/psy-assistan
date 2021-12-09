@@ -1,15 +1,11 @@
-@import '../../mixins/mixins.scss';
+@import '../../variables/variables.scss';
 
 .header {
-  font-family: Montserrat;
-  font-style: normal;
+  @extend %fonts;
+  @extend %fz-64-18;
   font-weight: 600;
-  font-size: calc(18px + (64 - 18) * ((100vw - 320px) / (1556 - 320)));
-  line-height: calc(18px + (64 - 18) * ((100vw - 320px) / (1556 - 320)));
   text-align: center;
   letter-spacing: 0.035em;
-  @include adaptive(width, 1254, 278);
-  @include adaptivePadding(margin, 154, 333, 99, 21);
 
   &__color {
     color: #2b6684;
