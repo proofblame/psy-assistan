@@ -1,0 +1,15 @@
+.header {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 64px;
+  text-align: center;
+  letter-spacing: 0.035em;
+  width: 65%;
+  margin: 200px auto 0;
+
+  &__color {
+    color: #2b6684;
+  }
+}

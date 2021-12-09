@@ -1,15 +1,9 @@
 .app {
   margin: 0 auto;
-  width: 500px;
-  &__title {
-    color: green;
-  }
+  width: 100vw;
+}
 
-  &__subtitle {
-    color: red;
-  }
-
-  &__link {
-    color: hotpink;
-  }
+.wrapper {
+  display: flex;
+  justify-content: center;
 }
