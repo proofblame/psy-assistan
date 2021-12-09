@@ -9,10 +9,12 @@ const Container = ({ children }) => {
 
 Container.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 Container.dedaultProps = {
   children: null,
+  className: null,
 };
 
 export default Container;
