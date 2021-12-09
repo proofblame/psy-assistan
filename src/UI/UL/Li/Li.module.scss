@@ -1,0 +1,40 @@
+@import '../../../variables/variables.scss';
+
+.listItem {
+  padding-left: calc(77px + 17px + 18px);
+  margin-bottom: 30px;
+  position: relative;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.035em;
+  color: $mainColor;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    top: 0;
+    left: 77px;
+  }
+
+  &_separated {
+    &:nth-child(4) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(n + 5) {
+      padding-left: 57px;
+
+      &::before {
+        left: 20px;
+      }
+    }
+  }
+}
