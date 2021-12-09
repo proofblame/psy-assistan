@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import style from './Container.module.scss';
 
 const Container = ({ children, className }) => {
-  const classes = classNames(style.container, style[className]);
+  const classes = classNames(style[className]);
   return <div className={classes}>{children}</div>;
 };
 

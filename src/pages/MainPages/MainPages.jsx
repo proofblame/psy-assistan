@@ -1,10 +1,12 @@
 import React from 'react'
+import Container from '../../UI/Container/Container'
+import Important from './Important/Important'
 
 const MainPages = () => {
   return (
-    <div>
-
-    </div>
+    <Container className="container">
+      <Important />
+    </Container>
   )
 }
 

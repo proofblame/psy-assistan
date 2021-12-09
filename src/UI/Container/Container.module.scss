@@ -1,8 +1,16 @@
+@import '../../mixins/mixins.scss';
+
 .container {
-  background: #f6f6f6;
-  border-radius: 10px;
+  width: 100%;
+  max-width: $maxWidth + px;
+
+  @media screen and (max-width: ($breakPoint + px)) {
+    @include adaptivePadding(padding, 0, 38, 0, 21);
+  }
 }
 
-.size {
-  width: 824px;
+._1155 {
+  width: 100%;
+  max-width: 1155px;
+  margin: 0 auto;
 }
