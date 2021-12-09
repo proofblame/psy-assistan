@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import style from './UL.module.scss';
 import Li from './Li/Li';
 
-const UL = ({ children, isArray = false, className }) => {
-  const classes = classNames(style.list, style[className]);
+const UL = ({ children, className, isArray = false }) => {
+  const classes = classNames(style.list, className);
   return (
     <>
       <ul className={classes}>

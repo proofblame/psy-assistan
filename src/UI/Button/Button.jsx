@@ -1,26 +1,27 @@
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import style from './Button.module.scss'
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import style from './Button.module.scss';
 
 const Button = ({
-  children, onClick, className, disabled, active, ...attr
+  children,
+  onClick,
+  className,
+  disabled,
+  active,
+  ...attr
 }) => {
-  const onClickAction = e => {
+  const onClickAction = (e) => {
     if (disabled) {
-      e.preventDefault()
+      e.preventDefault();
     } else {
-      e.preventDefault()
-      return onClick(e)
+      e.preventDefault();
+      return onClick(e);
     }
-  }
+  };
 
-  const classes = classNames(
-    style.button,
-    style[className],
-    { active },
-  )
-  console.log(style)
-  const Tag = attr.href ? 'a' : 'button'
+  const classes = classNames(style.button, className, { active });
+  console.log(classes);
+  const Tag = attr.href ? 'a' : 'button';
 
   return (
     <Tag
@@ -31,8 +32,8 @@ const Button = ({
     >
       {children}
     </Tag>
-  )
-}
+  );
+};
 
 Button.propTypes = {
   children: PropTypes.node,
@@ -40,14 +41,14 @@ Button.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   active: PropTypes.bool,
-}
+};
 
 Button.defaultProps = {
   children: 'Кнопка',
-  onClick: () => { },
+  onClick: () => {},
   className: '',
   disabled: false,
   active: false,
-}
+};
 
-export default Button
+export default Button;

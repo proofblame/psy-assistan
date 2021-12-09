@@ -4,6 +4,7 @@ $fontFamily: 'Montserrat', sans-serif;
 
 $mainColor: #2b6684;
 $secondaryColor: #98c1c5;
+$backgroundListColor: #f6f6f6;
 
 $_768: 767.98px;
 $reasonsListSize: 1479px;
@@ -31,13 +32,30 @@ $reasonsListSize: 1479px;
   @include adaptive(font-size, 36, 18);
   @include adaptive(line-height, 36, 18);
 }
+
+%fz-30 {
+  @include adaptive(font-size, 30, 8);
+  @include adaptive(line-height, 29, 8);
+}
+
 %fz-24 {
   @include adaptive(font-size, 24, 12);
   @include adaptive(line-height, 27, 13);
 }
+
+%fz-24-12 {
+  @include adaptive(font-size, 24, 12);
+  @include adaptive(line-height, 37, 15);
+}
+
 %fz-button {
   @include adaptive(font-size, 24, 10);
   @include adaptive(line-height, 37, 15);
+}
+
+%fz-18 {
+  @include adaptive(font-size, 18, 12);
+  @include adaptive(line-height, 20, 13);
 }
 
 %flex {

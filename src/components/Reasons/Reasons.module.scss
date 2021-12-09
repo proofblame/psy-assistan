@@ -1,3 +1,136 @@
-.img {
-  width: 150px;
+@import '../../variables/variables.scss';
+
+.list {
+  @include adaptive(width, 1479, 230);
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  @include adaptive(grid-column-gap, 63, 0);
+  @include adaptive(grid-row-gap, 146, 100);
+  @media screen and (max-width: 1550px) {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 700px) {
+    justify-content: center;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.item {
+  @include adaptive(width, 451, 229);
+  @include adaptive(height, 273, 139);
+  @extend %fz-18;
+  margin: 0 auto;
+  background-color: $backgroundListColor;
+}
+
+.sayNo {
+  position: absolute;
+  @include adaptive(width, 303, 155);
+  @include adaptive(height, 204, 104);
+  @include adaptive(top, -95, -48);
+  @include adaptive(left, 129, 66);
+}
+
+.calm {
+  position: absolute;
+  @include adaptive(width, 220, 111);
+  @include adaptive(height, 197, 100);
+  @include adaptive(top, -88, -45);
+  @include adaptive(left, 115, 58);
+}
+
+.favourite {
+  position: absolute;
+  @include adaptive(width, 175, 111);
+  @include adaptive(height, 212, 100);
+  @include adaptive(top, -98, -50);
+  @include adaptive(left, 126, 64);
+}
+
+.selfEstimation {
+  position: absolute;
+  @include adaptive(width, 124, 63);
+  @include adaptive(height, 197, 100);
+  @include adaptive(top, -88, -45);
+  @include adaptive(left, 172, 88);
+}
+
+.energy {
+  position: absolute;
+  @include adaptive(width, 178, 90);
+  @include adaptive(height, 197, 103);
+  @include adaptive(top, -93, -47);
+  @include adaptive(left, 136, 69);
+}
+
+.relations {
+  position: absolute;
+  @include adaptive(width, 240, 122);
+  @include adaptive(height, 207, 105);
+  @include adaptive(top, -98, -50);
+  @include adaptive(left, 120, 61);
+}
+
+.text {
+  @include adaptivePadding(margin, 143, 53, 73, 27);
+  text-align: center;
+  @extend %fonts;
+  @extend %fz-24;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  color: $mainColor;
+}
+
+.wrapper {
+  @include adaptivePadding(margin, 150, 0, 98, 0);
+  display: flex;
+  justify-content: center;
+}
+
+.improve {
+  font-family: NexaScript, Arial sans-serif;
+  text-align: center;
+  @include adaptivePadding(margin, 50, 0, 15, 0);
+  @extend %fz-30;
+  color: $mainColor;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include adaptive(width, 47, 14);
+    @include adaptive(height, 12, 8);
+    @include adaptivePadding(margin, 10, -70, 0, -25);
+    background: url('../../images/Pseudo.svg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    @include adaptive(width, 47, 14);
+    @include adaptive(height, 12, 5);
+    @include adaptivePadding(margin, 10, 20, 0, 7);
+    background: url('../../images/Pseudo.svg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.button {
+  background: $mainColor;
+  @include adaptive(width, 584, 227);
+  @include adaptive(height, 116, 43);
+  @extend %fz-24-12;
+  color: #fff;
+  border: none;
+  outline: none;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
