@@ -11,12 +11,11 @@
   @extend %fz-button;
   transition: color 0.2s linear, background-color 0.2s linear;
 }
-._light {
+.light {
   $color: #98c1c5;
   $reverceColor: #2b6684;
   $activeColor: #032e42;
   $disabledColor: rgba(152, 193, 197, 0.6);
-
   color: $reverceColor;
   background: $color;
   border: 3px solid $color;
@@ -30,7 +29,10 @@
     color: $reverceColor;
   }
   &:disabled {
-    color: $disabledColor;
+    background: $disabledColor;
+    color: #fff;
+    border-color: $disabledColor;
+    cursor: not-allowed;
   }
 }
 .dark {
@@ -54,5 +56,6 @@
   }
   &:disabled {
     color: $disabledColor;
+    cursor: not-allowed;
   }
 }

@@ -1,0 +1,27 @@
+@import '../../../variables/variables.scss';
+.section {
+  width: 100%;
+  background-color: $backgroundListColor;
+}
+.h2 {
+}
+.wrapper {
+  @extend %flex;
+}
+.img {
+  @include adaptive(width, 547, 278);
+}
+.subwrapper {
+}
+.title {
+  @extend %fz-36-14;
+  color: $mainColor;
+  @include adaptive(margin-bottom, 38, 20);
+}
+.text {
+  @extend %fz-24;
+  @include adaptive(margin-bottom, 56, 20);
+}
+
+.subtext {
+}
