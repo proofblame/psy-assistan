@@ -19,6 +19,12 @@
   }
 }
 
+.header {
+  text-align: center;
+  @extend %fz-64-18;
+  @extend %fonts;
+}
+
 .item {
   @include adaptive(width, 451, 229);
   @include adaptive(height, 273, 139);
@@ -86,7 +92,7 @@
 }
 
 .wrapper {
-  @include adaptivePadding(margin, 150, 0, 98, 0);
+  @include adaptivePadding(margin, 150, 0, 50, 0);
   display: flex;
   justify-content: center;
 }

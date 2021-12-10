@@ -1,17 +1,9 @@
+@import '../../variables/variables.scss';
+
 .header {
-  font-family: Montserrat;
+  @extend %fonts;
+  @extend %fz-64-18;
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
-  line-height: 40px;
   letter-spacing: 0.035em;
-  width: 600px;
-}
-
-.color {
-  color: #2b6684;
-}
-
-.paddings {
-  padding: 66px 0 66px 69px;
 }

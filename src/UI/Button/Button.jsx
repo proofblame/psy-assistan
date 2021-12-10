@@ -19,7 +19,7 @@ const Button = ({
     }
   };
 
-  const classes = classNames(style.button, className, { active });
+  const classes = classNames(style.button, style.className, { active });
   console.log(classes);
   const Tag = attr.href ? 'a' : 'button';
 

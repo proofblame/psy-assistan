@@ -33,7 +33,7 @@ UL.propTypes = {
 UL.defaultProps = {
   children: '',
   className: '',
-  isArray: PropTypes.bool,
+  isArray: false,
 };
 
 export default UL;
