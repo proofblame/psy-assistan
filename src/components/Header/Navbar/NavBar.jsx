@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Logo from '../../Header/images/Logo.svg';
 import IMG from '../../../UI/IMG/IMG';
 import navbar from './Navbar.module.scss';
