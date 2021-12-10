@@ -18,7 +18,7 @@ const Reasons = () => {
   return (
     <section className='reasons'>
       <Container>
-        <H2 className='header'>
+        <H2 className={reasons.header}>
           Регулярные сессии с психологом повышают качество жизни
         </H2>
         <div className={reasons.wrapper}>

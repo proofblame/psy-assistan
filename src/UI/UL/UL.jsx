@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import style from './UL.module.scss';
 import Li from './Li/Li';
@@ -21,6 +22,18 @@ const UL = ({ children, className, isArray = false }) => {
       </ul>
     </>
   );
+};
+
+UL.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  isArray: PropTypes.bool,
+};
+
+UL.defaultProps = {
+  children: '',
+  className: '',
+  isArray: false,
 };
 
 export default UL;

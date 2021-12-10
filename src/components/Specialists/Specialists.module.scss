@@ -1,0 +1,115 @@
+@import '../../variables/variables.scss';
+
+%listItem {
+  content: '';
+  position: absolute;
+  @include adaptive(width, 52, 35);
+  @include adaptive(height, 52, 35);
+  top: 0;
+  @include adaptive(left, -49, -40);
+}
+
+.headerWrapper {
+  @include adaptivePadding(margin, 150, 0, 50, 0);
+}
+
+.header {
+  text-align: center;
+  @extend %fz-64-18;
+  @extend %fonts;
+}
+
+.subheader {
+  text-align: center;
+  color: #98c1c5;
+}
+
+.wrapper {
+  @include adaptivePadding(margin, 150, 137, 53, 65);
+  display: flex;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+}
+
+.imgWrapper {
+  @include adaptive(width, 300, 183);
+  margin-right: calc(72px + 270 * ((100vw - 320px) / 1556));
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.text {
+  font-family: NexaScript, Arial sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  @extend %fz-30;
+  color: $mainColor;
+  @include adaptive(width, 300, 83);
+  margin-bottom: calc(0px + 40 * ((100vw - 320px) / 1556));
+}
+
+.specialist {
+  @include adaptive(width, 300, 74);
+  @include adaptive(height, 666, 165);
+  margin-bottom: calc(53px + 154 * ((100vw - 320px) / 1556));
+}
+
+.list {
+  position: relative;
+}
+
+.listItemEdu {
+  &::before {
+    @extend %listItem;
+    background: url('../../images/Education.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.listItemInter {
+  &::before {
+    @extend %listItem;
+    background: url('../../images/Interview.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.listItemStudy {
+  &::before {
+    @extend %listItem;
+    background: url('../../images/Study.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.listItemExp {
+  &::before {
+    @extend %listItem;
+    background: url('../../images/Experience.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.listHeader {
+  @extend %fonts;
+  @extend %fz-36-40;
+  margin-bottom: calc(5px + 19 * ((100vw - 320px) / 1556));
+}
+
+.listText {
+  @include adaptive(width, 633, 226);
+  @extend %fonts;
+  @extend %fz-24-12;
+  margin-bottom: calc(30px + 102 * ((100vw - 320px) / 1556));
+}
