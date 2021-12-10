@@ -16,7 +16,7 @@ import Wrap from '../../UI/Wrap/Wrap';
 
 const Reasons = () => {
   return (
-    <section className='reasons'>
+    <section className={reasons.reasons}>
       <Wrap>
         <H2 className={reasons.header}>
           Регулярные сессии с психологом повышают качество жизни

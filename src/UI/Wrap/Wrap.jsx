@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import wrap from './Wrap.module.scss';
 
-const Wrap = ({ children }) => {
-  const classes = classNames(wrap.wrap);
+const Wrap = ({ children, className }) => {
+  const classes = classNames(wrap.wrap, className);
   return <div className={classes}>{children}</div>;
 };
 
