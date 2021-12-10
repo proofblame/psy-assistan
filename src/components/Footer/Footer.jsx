@@ -12,10 +12,12 @@ const Footer = () => {
     <section className={footer.footer}>
       <div className={footer.container}>
         <div className={footer.socialContainer}>
-          <H3>Если есть вопросы - пишите нам </H3>
-          <p className={footer.subheader}>Мы будем рады отвеить на них!</p>
+          <H3 className={footer.footerHeader}>
+            Если есть вопросы - пишите нам{' '}
+          </H3>
+          <p className={footer.subheader}>Мы будем рады ответить на них!</p>
           <nav className={footer.social}>
-            <UL>
+            <UL className={footer.socialNavList}>
               <Li className={footer.socialNavItem}>
                 <a href='https://www.facebook.com/'>
                   <IMG
@@ -49,31 +51,52 @@ const Footer = () => {
         <nav className={footer.footerList}>
           <UL>
             <Li className={footer.navItem}>
-              <a href='#'>Вопросы-ответы</a>
+              <a href='#' className={footer.navItemLink}>
+                Вопросы-ответы
+              </a>
             </Li>
             <Li className={footer.navItem}>
-              <a href='#'>Контакты</a>
+              <a href='#' className={footer.navItemLink}>
+                Контакты
+              </a>
             </Li>
             <Li className={footer.navItem}>
-              <a href='#'>Работа в Psy-assistant</a>
+              <a href='#' className={footer.navItemLink}>
+                Работа в Psy-assistant
+              </a>
             </Li>
             <Li className={footer.navItem}>
-              <a href='#'>Блог</a>
+              <a href='#' className={footer.navItemLink}>
+                Блог
+              </a>
             </Li>
             <Li className={footer.navItem}>
-              <a href='#'>Psy-assistant для бизнеса</a>
+              <a href='#' className={footer.navItemLink}>
+                Psy-assistant для бизнеса
+              </a>
             </Li>
             <Li className={footer.navItem}>
-              <a href='#'>Проверка совместимости</a>
+              <a href='#' className={footer.navItemLink}>
+                Проверка совместимости
+              </a>
             </Li>
           </UL>
         </nav>
         <div className={footer.feedback}>
           <p className={footer.text}>
             Регистрация на сайте означает согласие{' '}
-            <a href='#'>с пользовательским соглашением.</a> Политика в отношении
-            обработки и защиты персональных данных.
+            <a href='#' className={footer.textLink}>
+              с пользовательским соглашением.
+            </a>{' '}
+            Политика в отношении обработки и защиты персональных данных.
           </p>
+          <div className={footer.like}>
+            <div className={footer.likeContainer}>
+              <p className={footer.likeText}>Нравится!</p>
+              <p className={footer.likeCounter}>35 тыс.</p>
+            </div>
+            <button className={footer.likeButton}>Поделиться</button>
+          </div>
         </div>
       </div>
     </section>
