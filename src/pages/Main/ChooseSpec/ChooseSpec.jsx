@@ -1,9 +1,9 @@
 import choose from './ChooseSpec.module.scss';
 
-import Wrap from '../../UI/Wrap/Wrap';
-import H1 from '../../UI/H1/H1';
-import H3 from '../../UI/H3/H3';
-import Button from '../../UI/Button/Button';
+import Wrap from '../../../UI/Wrap/Wrap';
+import H1 from '../../../UI/H1/H1';
+import H3 from '../../../UI/H3/H3';
+import Button from '../../../UI/Button/Button';
 
 const ChooseSpec = () => {
   return (

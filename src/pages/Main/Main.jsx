@@ -1,6 +1,11 @@
-import ChooseSpec from '../../components/ChooseSpec/ChooseSpec';
-import Reasons from '../../components/Reasons/Reasons';
-import Specialists from '../../components/Specialists/Specialists';
+import ChooseSpec from './ChooseSpec/ChooseSpec';
+import Reasons from './Reasons/Reasons';
+import Specialists from './Specialists/Specialists';
+import СhoiceSpecialist from './СhoiceSpecialist/СhoiceSpecialist'
+import AboutService from './AboutService/AboutService'
+import Statistics from './Statistics/Statistics'
+import Important from './Important/Important'
+
 import styles from './Main.module.scss';
 
 const Main = () => {
@@ -9,6 +14,10 @@ const Main = () => {
       <ChooseSpec />
       <Reasons />
       <Specialists />
+      <СhoiceSpecialist />
+      <AboutService />
+      <Statistics />
+      <Important />
     </section>
   );
 };

@@ -1,7 +1,7 @@
-@import '../../variables/variables.scss';
+@import '../../../variables/variables.scss';
 
 .background {
-  background-image: url(../../images/Lady.svg);
+  background-image: url('./images/Lady.svg');
   background-size: cover;
   width: 100%;
   @include adaptive(height, 960, 201);
@@ -20,7 +20,7 @@
   // @include adaptive(width, 1920, 320);
   @include adaptive(height, 312, 102);
   position: relative;
-  background-image: url('../../images/Vector190.svg');
+  background-image: url('./images/Vector190.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }

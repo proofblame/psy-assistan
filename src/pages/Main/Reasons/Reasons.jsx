@@ -1,18 +1,18 @@
-import SayNo from '../../images/SayNo.svg';
-import Calm from '../../images/Calm.svg';
-import Favourite from '../../images/Favourite.svg';
-import Energy from '../../images/Energy.svg';
-import Relations from '../../images/Relations.svg';
-import SelfEstimation from '../../images/SelfEstimation.svg';
+import SayNo from './images/SayNo.svg';
+import Calm from './images/Calm.svg';
+import Favourite from './images/Favourite.svg';
+import Energy from './images/Energy.svg';
+import Relations from './images/Relations.svg';
+import SelfEstimation from './images/SelfEstimation.svg';
 
 import reasons from './Reasons.module.scss';
 
-import H2 from '../../UI/H2/H2';
-import Li from '../../UI/UL/Li/Li';
-import UL from '../../UI/UL/UL';
-import IMG from '../../UI/IMG/IMG';
-import Button from '../../UI/Button/Button';
-import Wrap from '../../UI/Wrap/Wrap';
+import H2 from '../../../UI/H2/H2';
+import Li from '../../../UI/UL/Li/Li';
+import UL from '../../../UI/UL/UL';
+import IMG from '../../../UI/IMG/IMG';
+import Button from '../../../UI/Button/Button';
+import Wrap from '../../../UI/Wrap/Wrap';
 
 const Reasons = () => {
   return (

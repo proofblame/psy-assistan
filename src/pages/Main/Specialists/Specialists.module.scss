@@ -1,4 +1,4 @@
-@import '../../variables/variables.scss';
+@import '../../../variables/variables.scss';
 
 .specialists {
   background-color: $backgroundListColor;
@@ -79,7 +79,7 @@
 .listItemEdu {
   &::before {
     @extend %listItem;
-    background: url('../../images/Education.svg');
+    background: url('./images/Education.svg');
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -88,7 +88,7 @@
 .listItemInter {
   &::before {
     @extend %listItem;
-    background: url('../../images/Interview.svg');
+    background: url('./images/Interview.svg');
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -97,7 +97,7 @@
 .listItemStudy {
   &::before {
     @extend %listItem;
-    background: url('../../images/Study.svg');
+    background: url('./images/Study.svg');
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -106,7 +106,7 @@
 .listItemExp {
   &::before {
     @extend %listItem;
-    background: url('../../images/Experience.svg');
+    background: url('./images/Experience.svg');
     background-repeat: no-repeat;
     background-position: center;
   }

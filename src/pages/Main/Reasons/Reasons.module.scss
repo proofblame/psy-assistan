@@ -1,4 +1,4 @@
-@import '../../variables/variables.scss';
+@import '../../../variables/variables.scss';
 
 .reasons {
   padding: calc(100px + 154 * ((100vw - 320px) / 1556)) 0;
@@ -123,7 +123,7 @@
     @include adaptive(width, 47, 14);
     @include adaptive(height, 12, 8);
     @include adaptivePadding(margin, 10, -70, 0, -25);
-    background: url('../../images/Pseudo.svg');
+    background: url('./images/Pseudo.svg');
     object-fit: cover;
     background-repeat: no-repeat;
   }
@@ -134,7 +134,7 @@
     @include adaptive(width, 47, 14);
     @include adaptive(height, 12, 5);
     @include adaptivePadding(margin, 10, 20, 0, 7);
-    background: url('../../images/Pseudo.svg');
+    background: url('./images/Pseudo.svg');
     object-fit: cover;
     background-repeat: no-repeat;
   }

@@ -1,13 +1,13 @@
 import spec from './Specialists.module.scss';
-import H2 from '../../UI/H2/H2';
-import H3 from '../../UI/H3/H3';
-import IMG from '../../UI/IMG/IMG';
-import UL from '../../UI/UL/UL';
-import Specialist from '../../images/Specialist.svg';
-import Li from '../../UI/UL/Li/Li';
-import Button from '../../UI/Button/Button';
-import Container from '../../UI/Container/Container';
-import Wrap from '../../UI/Wrap/Wrap';
+import H2 from '../../../UI/H2/H2';
+import H3 from '../../../UI/H3/H3';
+import IMG from '../../../UI/IMG/IMG';
+import UL from '../../../UI/UL/UL';
+import Specialist from './images/Specialist.svg';
+import Li from '../../../UI/UL/Li/Li';
+import Button from '../../../UI/Button/Button';
+import Container from '../../../UI/Container/Container';
+import Wrap from '../../../UI/Wrap/Wrap';
 
 const Specialists = () => {
   return (
