@@ -23,6 +23,7 @@
   text-align: center;
   @extend %fz-64-18;
   @extend %fonts;
+  @include adaptive(width, 1254, 278);
 }
 
 .item {
@@ -92,9 +93,16 @@
 }
 
 .wrapper {
-  @include adaptivePadding(margin, 150, 0, 50, 0);
+  margin-top: calc(100px + 255 * ((100vw - 320px) / 1556));
+  margin-bottom: calc(50px + 150 * ((100vw - 320px) / 1556));
   display: flex;
   justify-content: center;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: calc(50px + 150 * ((100vw - 320px) / 1556));
 }
 
 .improve {
