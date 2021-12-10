@@ -110,12 +110,12 @@
 }
 
 .improve {
-  font-family: NexaScript, Arial sans-serif;
   text-align: center;
   @include adaptivePadding(margin, 50, 0, 15, 0);
-  @extend %fz-30;
   color: $mainColor;
   position: relative;
+  font-family: $font_Nexa;
+  @extend %fz-36-40;
 
   &::before {
     content: '';

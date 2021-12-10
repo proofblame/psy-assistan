@@ -1,8 +1,14 @@
 @import '../../../variables/variables.scss';
 
 .specialists {
+  color: $mainColor;
+  @extend %fonts;
   background-color: $backgroundListColor;
-  width: 100%;
+}
+.container {
+  @extend %flex;
+  flex-direction: column;
+  @include adaptivePadding(padding, 150, 0, 50, 0);
 }
 
 %listItem {
@@ -10,8 +16,10 @@
   position: absolute;
   @include adaptive(width, 52, 35);
   @include adaptive(height, 52, 35);
+  background-position: center;
+  background-size: contain;
   top: 0;
-  @include adaptive(left, -49, -40);
+  left: 0;
 }
 
 .headerWrapper {
@@ -20,9 +28,10 @@
 }
 
 .header {
-  text-align: center;
-  @extend %fz-64-18;
-  @extend %fonts;
+  @include adaptive(margin-bottom, 150, 20);
+  span {
+    color: #98c1c5;
+  }
 }
 
 .subheader {
@@ -31,49 +40,54 @@
 }
 
 .wrapper {
-  @include adaptivePadding(margin, 150, 137, 53, 65);
-  display: flex;
-
-  @media screen and (max-width: 700px) {
+  width: 100%;
+  @extend %flex;
+  align-items: flex-start;
+  @include adaptive(margin-bottom, 150, 50);
+  @include adaptive(column-gap, 263, 0);
+  @media screen and (max-width: $_768) {
+    row-gap: 50px;
     flex-direction: column;
-  }
-}
-
-.imgWrapper {
-  @include adaptive(width, 300, 183);
-  margin-right: calc(72px + 270 * ((100vw - 320px) / 1556));
-  @media screen and (max-width: 700px) {
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
     align-items: center;
   }
 }
 
-.buttonWrapper {
-  display: flex;
-  justify-content: center;
+.imgWrapper {
+  margin: 0;
+  padding: 0;
+  @extend %flex;
+  flex-direction: column;
+  @include adaptive(row-gap, 40, 0);
+  max-width: 300px;
+  @media screen and (max-width: $_768) {
+    flex-direction: row-reverse;
+    column-gap: 33px;
+  }
 }
-
-.text {
-  font-family: NexaScript, Arial sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  @extend %fz-30;
-  color: $mainColor;
-  @include adaptive(width, 300, 83);
-  margin-bottom: calc(0px + 40 * ((100vw - 320px) / 1556));
-}
-
-.specialist {
+.img {
   @include adaptive(width, 300, 74);
-  @include adaptive(height, 666, 165);
-  margin-bottom: calc(53px + 154 * ((100vw - 320px) / 1556));
+  flex: 1 1 100%;
+}
+.text {
+  font-family: $font_Nexa;
+  @extend %fz-36-40;
+  flex: 0 1 auto;
+}
+
+.buttonWrapper {
+  @include adaptive(margin-bottom, 50, 15);
 }
 
 .list {
+  width: 100%;
   position: relative;
+  @extend %flex;
+  flex-direction: column;
+  @include adaptive(row-gap, 100, 30);
+  li {
+    width: 100%;
+    @include adaptive(padding-left, 49, 40);
+  }
 }
 
 .listItemEdu {
@@ -90,7 +104,6 @@
     @extend %listItem;
     background: url('./images/Interview.svg');
     background-repeat: no-repeat;
-    background-position: center;
   }
 }
 
@@ -99,6 +112,7 @@
     @extend %listItem;
     background: url('./images/Study.svg');
     background-repeat: no-repeat;
+
     background-position: center;
   }
 }
@@ -119,19 +133,11 @@
 }
 
 .listText {
-  @include adaptive(width, 633, 226);
   @extend %fonts;
   @extend %fz-24-12;
-  margin-bottom: calc(30px + 102 * ((100vw - 320px) / 1556));
 }
 
 .confidential {
-  font-family: NexaScript, Arial sans-serif;
-  @include adaptivePadding(margin, 50, 0, 15, 0);
-  text-align: center;
-  font-style: normal;
-  font-weight: 300;
-  @extend %fz-30;
-  letter-spacing: 0.1em;
-  color: #2b6684;
+  font-family: $font_Nexa;
+  @extend %fz-36-40;
 }

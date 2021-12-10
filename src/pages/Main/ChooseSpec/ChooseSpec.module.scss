@@ -1,94 +1,112 @@
 @import '../../../variables/variables.scss';
 
 .background {
-  background-image: url('./images/Lady.svg');
-  background-size: cover;
   width: 100%;
-  @include adaptive(height, 960, 201);
-  // margin-top: calc(128px + 150 * ((100vw - 320px) / 1556));
+  position: absolute;
+  z-index: -5;
 }
 
 .spec {
+  @extend %fonts;
+  color: $mainColor;
   width: 100%;
+}
+.specContainer {
+  margin: 0 auto;
+  max-width: 1920px;
   position: relative;
-  @include adaptive(height, 1356, 377);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    padding-top: 150px;
+    @include adaptive(width, 1920, 403);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./images/Lady-2.svg');
+    background-size: contain;
+    background-position-y: 150px;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+.container {
+  @extend %flex;
+  flex-direction: column;
+  @include adaptivePadding(padding, 150, 0, 50, 0);
 }
 
 .backgroundLine {
-  background-color: $mainColor;
+  // background-color: $mainColor;
   width: 100%;
-  // @include adaptive(width, 1920, 320);
+
   @include adaptive(height, 312, 102);
   position: relative;
-  background-image: url('./images/Vector190.svg');
+  z-index: -1;
+  // background-image: url('./images/Vector190.svg');
   background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: center;
+  background-size: contain;
 }
 
 .headerWrap {
-  margin-top: calc(50px + 195 * ((100vw - 320px) / 1556));
-  padding-bottom: calc(88px + 469 * ((100vw - 320px) / 1556));
-  margin-left: calc(21px + 46 * ((100vw - 320px) / 1556));
-  // display: flex;
-  // flex-direction: column;
+  @include adaptive(margin-bottom, 566, 88);
 }
 
 .headerMain {
-  font-weight: 600;
-  letter-spacing: 0.035em;
-  color: #2b6684;
+  color: $mainColor;
   text-align: left;
   @include adaptive(width, 862, 262);
-  margin: 0;
+  @include adaptive(margin-bottom, 30, 14);
 }
 
 .subheader {
   @extend %fonts;
-  @extend %fz-36-40-18;
+  @extend %fz-36-40-12;
+  font-weight: normal;
   @include adaptive(width, 670, 242);
   color: $secondaryColor;
-  margin-top: calc(14px + 30 * ((100vw - 320px) / 1556));
+  @include adaptive(margin-bottom, 50, 16);
 }
 
 .text {
-  margin-left: calc(0px + 46 * ((100vw - 320px) / 1556));
-  @include adaptive(width, 172, 107);
-  @include adaptive(height, 68, 11);
-  @extend %fz-36-12;
-  letter-spacing: 0.1em;
-  color: $mainColor;
-  font-family: NexaScript, Arial sans-serif;
+  font-family: $font_Nexa;
+  @extend %fz-36-40-12;
+}
+
+.buttonWrapper {
+  @extend %flex;
+  @include adaptive(column-gap, 20, 0);
+  @include adaptive(width, 800, 175);
+  @media screen and (max-width: $_768) {
+    flex-direction: column-reverse;
+    row-gap: 10px;
+  }
 }
 
 .buttonContainer {
-  display: flex;
-  align-items: center;
-  margin-top: calc(10px + 50 * ((100vw - 320px) / 1556));
-  position: absolute;
-  @media screen and (max-width: 700px) {
-    flex-direction: column-reverse;
+  color: #fff;
+  @extend %flex;
+  @include adaptive(column-gap, 90, 13);
+  div {
+    @extend %flex;
+    justify-content: center;
+    flex-direction: column;
+    @include adaptive(row-gap, 15, 4);
+    @include adaptive(width, 560, 132);
+    @include adaptive(height, 180, 57);
+    @include adaptive(border-radius, 10, 5);
+    background-color: $secondaryColor;
   }
 }
 
 .info {
-  @include adaptive(width, 560, 132);
-  @include adaptive(height, 179, 57);
   @extend %fz-48-14;
-  background-color: $secondaryColor;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-right: calc(13px + 90 * ((100vw - 320px) / 1556));
+  font-weight: 600;
 }
 
 .infoSub {
   @extend %fz-24-8;
-  margin-top: calc(4px + 15 * ((100vw - 320px) / 1556));
 }
