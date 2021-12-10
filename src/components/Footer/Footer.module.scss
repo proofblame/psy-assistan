@@ -7,9 +7,186 @@
 }
 
 .container {
+  display: flex;
+  @include adaptive(width, 1491, 278);
+  justify-content: space-between;
+
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footerHeader {
+  @extend %fz-36-35;
+  color: #fff;
+  @include adaptive(width, 397, 199);
+  @media screen and (max-width: 780px) {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.subheader {
+  @include adaptive(width, 348, 145);
+  @extend %fz-24-10;
+  color: #fff;
+  opacity: 0.8;
+  font-family: NexaScript;
+  margin-top: 17px;
+  @media screen and (max-width: 780px) {
+    margin: 17px auto 0;
+    text-align: center;
+  }
+}
+
+.footerList {
+  @media screen and (max-width: 780px) {
+    @include adaptivePadding(margin, 50, 0, 50, 0);
+  }
+}
+
+.social {
+  margin-top: calc(30px + 60 * ((100vw - 320px) / 1556));
+  @include adaptive(width, 278, 219);
+}
+
+.socialNavList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navItem {
+  margin-top: 8px;
+
+  &:first-of-type() {
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 780px) {
+    text-align: center;
+  }
+}
+
+.navItemLink {
+  @extend %fonts;
+  @extend %fz-20-35;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  color: rgba(255, 255, 255, 0.8);
+
+  &:hover {
+    color: #fff;
+    transition: 0.5s;
+  }
+
+  @media screen and (max-width: 780px) {
+    text-align: start;
+  }
 }
 
 .image {
-  width: 63px;
-  height: 64px;
+  @include adaptive(width, 64, 48);
+  @include adaptive(width, 64, 48);
+}
+
+.text {
+  @include adaptive(width, 419, 275);
+  @extend %fonts;
+  @extend %fz-18-23;
+  letter-spacing: 0.035em;
+  color: $secondaryColor;
+
+  @media screen and (max-width: 780px) {
+    text-align: center;
+  }
+}
+
+.textLink {
+  color: #fff;
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.7s;
+  }
+}
+
+.like {
+  @include adaptive(width, 419, 278);
+  @include adaptive(height, 105, 165);
+  background: #fdfdfd;
+  border-radius: 10px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.likeContainer {
+  @include adaptive(width, 136, 160);
+
+  @media screen and (max-width: 780px) {
+    margin-bottom: 14px;
+    text-align: left;
+  }
+}
+
+.likeText {
+  text-align: end;
+  position: relative;
+  @extend %fonts;
+  @extend %fz-20-25;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  color: $mainColor;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include adaptive(width, 21, 16);
+    @include adaptive(height, 21, 16);
+    background-image: url(../Footer/images/Like.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include adaptive(top, 0, 0);
+    @include adaptive(left, 0, 0);
+  }
+
+  @media screen and (max-width: 780px) {
+    text-align: center;
+  }
+}
+
+.likeCounter {
+  @extend %fonts;
+  @extend %fz-18-23;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  color: $mainColor;
+  opacity: 0.6;
+}
+
+.likeButton {
+  @extend %fonts;
+  @extend %fz-18-27;
+  width: 183px;
+  height: 52px;
+  background: $mainColor;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.5s;
+    background-color: #fff;
+    opacity: 0.7;
+    color: $mainColor;
+  }
 }

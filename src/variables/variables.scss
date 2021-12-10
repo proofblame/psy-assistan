@@ -64,6 +64,11 @@ $reasonsListSize: 1479px;
   @include adaptive(line-height, 40, 18);
 }
 
+%fz-36-35 {
+  @include adaptive(font-size, 36, 16);
+  @include adaptive(line-height, 35, 18);
+}
+
 %fz-36-40-18 {
   @include adaptive(font-size, 36, 18);
   @include adaptive(line-height, 40, 18);
@@ -97,6 +102,11 @@ $reasonsListSize: 1479px;
   @include adaptive(line-height, 27, 16);
 }
 
+%fz-24-10 {
+  @include adaptive(font-size, 24, 10);
+  @include adaptive(line-height, 24, 10);
+}
+
 %fz-24-8 {
   @include adaptive(font-size, 24, 8);
   @include adaptive(line-height, 27, 9);
@@ -107,6 +117,16 @@ $reasonsListSize: 1479px;
   @include adaptive(line-height, 37, 15);
 }
 
+%fz-20-35 {
+  @include adaptive(font-size, 20, 14);
+  @include adaptive(line-height, 35, 25);
+}
+
+%fz-20-25 {
+  @include adaptive(font-size, 20, 14);
+  @include adaptive(line-height, 25, 18);
+}
+
 %fz-button {
   @include adaptive(font-size, 24, 10);
   @include adaptive(line-height, 37, 15);
@@ -115,6 +135,16 @@ $reasonsListSize: 1479px;
 %fz-18 {
   @include adaptive(font-size, 18, 12);
   @include adaptive(line-height, 20, 13);
+}
+
+%fz-18-27 {
+  @include adaptive(font-size, 18, 10);
+  @include adaptive(line-height, 27, 15);
+}
+
+%fz-18-23 {
+  @include adaptive(font-size, 18, 12);
+  @include adaptive(line-height, 23, 15);
 }
 
 %flex {
