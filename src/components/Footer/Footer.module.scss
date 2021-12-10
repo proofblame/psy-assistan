@@ -1,0 +1,15 @@
+@import '../../variables/variables.scss';
+
+.footer {
+  width: 100%;
+  background-color: #2b6684;
+  @include adaptivePadding(padding, 150, 210, 50, 21);
+}
+
+.container {
+}
+
+.image {
+  width: 63px;
+  height: 64px;
+}

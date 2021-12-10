@@ -1,0 +1,104 @@
+@import '../../variables/variables.scss';
+
+.header {
+  display: flex;
+  @include adaptive(width, 1556, 320);
+  justify-content: space-between;
+  @include adaptive(height, 116, 76);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: calc(12px + 25 * ((100vw - 320px) / 1556));
+}
+
+.logoText {
+  @extend %fonts;
+  @extend %fz-24-14;
+  font-weight: 600;
+  line-height: 98.51%;
+  text-align: center;
+  letter-spacing: 0.035em;
+  color: $secondaryColor;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 780px) {
+    display: none;
+  }
+}
+
+.psyco {
+  @extend %headerButton;
+}
+
+.entrance {
+  @extend %headerButton;
+  margin-left: calc(32px + 57 * ((100vw - 320px) / 1556));
+  margin-right: calc(32px + 38 * ((100vw - 320px) / 1556));
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background-image: url(../../components/Header/images/Lock.svg);
+    top: 0px;
+    @include adaptive(left, -24, -17);
+  }
+}
+
+.burger {
+  position: relative;
+  width: 36px;
+  height: 29px;
+  cursor: pointer;
+  display: none;
+
+  &Item {
+    position: absolute;
+    top: 21px;
+    width: 36px;
+    height: 4px;
+    margin: 0 auto;
+    background: $secondaryColor;
+
+    &::before {
+      position: absolute;
+      width: 36px;
+      height: 4px;
+      margin: 0 auto;
+      background: $secondaryColor;
+      content: '';
+      top: -20px;
+    }
+
+    &::after {
+      position: absolute;
+      width: 36px;
+      height: 4px;
+      margin: 0 auto;
+      background: $secondaryColor;
+      content: '';
+      top: -10px;
+    }
+
+    &:hover {
+      transition: 0.5s;
+      opacity: 0.5;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    display: block;
+    margin-top: calc(24px + 30 * ((100vw - 320px) / 1556));
+    margin-right: calc(21px + 60 * ((100vw - 320px) / 1556));
+  }
+}
