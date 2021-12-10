@@ -59,3 +59,43 @@
     cursor: not-allowed;
   }
 }
+
+%circleSettings {
+  $color: #98c1c5;
+  $reverceColor: #ffffff;
+  $hoverColor: #2b6684;
+  $activeColor: #032e42;
+  $disabledColor: rgba(152, 193, 197, 0.6);
+  color: $reverceColor;
+  background-color: $color;
+  border: none;
+  border-radius: 100%;
+  background-image: url('./images/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 23px 23px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  &:hover {
+    background-color: $hoverColor;
+    color: $color;
+  }
+  &:active {
+    background-color: $activeColor;
+    color: $reverceColor;
+  }
+  &:disabled {
+    color: $reverceColor;
+    cursor: not-allowed;
+    background-color: $disabledColor;
+  }
+}
+.circle {
+  @extend %circleSettings;
+}
+.circle_previous {
+  @extend %circleSettings;
+  transform: rotateY(180deg);
+}

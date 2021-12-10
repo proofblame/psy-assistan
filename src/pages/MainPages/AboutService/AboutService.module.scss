@@ -1,21 +1,36 @@
 @import '../../../variables/variables.scss';
 .section {
+  color: $mainColor;
+  @extend %fonts;
   width: 100%;
   background-color: $backgroundListColor;
 }
 .h2 {
+  @include adaptive(margin-bottom, 150, 20);
+}
+.container {
+  @extend %flex;
+  flex-direction: column;
+  @include adaptivePadding(padding, 150, 0, 50, 0);
 }
 .wrapper {
   @extend %flex;
+  @include adaptive(column-gap, 122, 0);
+  row-gap: 20px;
+  @include adaptive(margin-bottom, 150, 50);
+  @media screen and (max-width: $_768) {
+    flex-direction: column;
+  }
 }
 .img {
   @include adaptive(width, 547, 278);
+  flex: 1 1 100%;
 }
 .subwrapper {
 }
 .title {
   @extend %fz-36-14;
-  color: $mainColor;
+  font-weight: 600;
   @include adaptive(margin-bottom, 38, 20);
 }
 .text {
@@ -24,4 +39,9 @@
 }
 
 .subtext {
+  font-family: $font_Nexa;
+  @extend %fz-36-40;
+}
+.button {
+  @include adaptive(margin-bottom, 50, 15);
 }

@@ -1,0 +1,148 @@
+@import '../../../variables/variables.scss';
+
+.section {
+  @extend %fonts;
+  background-color: #fdfdfd;
+  color: $mainColor;
+}
+.container {
+  @extend %flex;
+  flex-direction: column;
+  @include adaptivePadding(padding, 150, 0, 50, 0);
+}
+.h2 {
+  @include adaptive(margin-bottom, 150, 50);
+}
+.wrapper {
+  @extend %flex;
+  @include adaptive(column-gap, 64, 0);
+  @include adaptive(margin-bottom, 150, 50);
+  row-gap: 25px;
+  @media screen and (max-width: $_768) {
+    flex-direction: column;
+  }
+}
+
+.list {
+  list-style-type: none;
+}
+.item {
+  @include adaptive(padding-left, 80, 30);
+  position: relative;
+  margin-bottom: 15px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-image: url('./images/mark.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include adaptive(width, 40, 15);
+    @include adaptive(height, 35, 13);
+  }
+}
+.active {
+  &::before {
+    background-image: url('./images/markActive.svg');
+  }
+}
+
+.textTitle {
+  @extend %fz-24-14;
+  @include adaptive(margin-bottom, 13, 4);
+}
+.subtitle {
+  @include adaptive(margin-bottom, 63, 20);
+  @extend %fz-36-40;
+}
+.subwrapper {
+  flex: 1 1 100%;
+  @include adaptive(width, 824, 278);
+  @include adaptivePadding(padding, 66, 69, 26, 18);
+  background-color: $backgroundListColor;
+  border-radius: 10px;
+}
+.sublist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(205px, 1fr));
+  @include adaptive(row-gap, 30, 15);
+  @media screen and (max-width: $_768) {
+    grid-template-columns: repeat(1, minmax(205px, 1fr));
+  }
+}
+
+.radio {
+  position: absolute;
+  visibility: hidden;
+
+  &:checked ~ .radioItem {
+    border-color: $mainColor;
+    border-style: solid;
+    background-color: none;
+    font-weight: 600;
+  }
+
+  &:checked ~ .radioItem::before {
+    background: $mainColor;
+    border-color: $mainColor;
+  }
+
+  &:checked ~ .label {
+    color: $mainColor;
+  }
+}
+.label {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    font-weight: 600;
+    .radioItem::before {
+      border-color: $mainColor;
+      background-color: $mainColor;
+    }
+  }
+}
+.radioItem {
+  @extend %fz-18;
+  display: flex;
+  align-items: center;
+  padding: 0.375em 0.75em 0.375em 0.375em;
+  border-radius: 99em;
+  transition: 0.25s ease;
+  border-style: solid;
+  border-color: transparent;
+  &::before {
+    display: flex;
+    flex-shrink: 0;
+    content: '';
+    background-color: #ffffff;
+    border-color: $mainColor;
+    border-style: solid;
+    border-width: 1px;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-right: 0.375em;
+    transition: 0.25s ease;
+  }
+}
+.slider {
+  width: 100%;
+  @extend %flex;
+  display: none;
+  column-gap: 10px;
+  margin-bottom: 50px;
+  @media screen and (max-width: $_768) {
+    display: flex;
+  }
+}
+.buttons {
+  flex: 0 0 auto;
+}
+.subtext {
+  font-family: $font_Nexa;
+  @extend %fz-36-40;
+}

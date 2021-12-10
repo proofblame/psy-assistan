@@ -9,23 +9,26 @@ const AboutService = () => {
   return (
     <section className={style.section}>
       <Container>
-        <H2 className={style.h2}>Как устроен сервис?</H2>
-        <div className={style.wrapper}>
-          <IMG
-            src={img} alt="Видеоконсультации"
-            className={style.img}
-          />
-          <div className={style.subwrapper}>
-            <p className={style.title}>Консультации по безопасному видеочату</p>
-            <p className={style.text}>На нашей платформе видеоконсультации проходят
-              в защищенном личном кабинете. Конфиденциальные сессии с вашим психологом доступны из любой точки мира.</p>
+        <div className={style.container}>
+          <H2 className={style.h2}>Как устроен сервис?</H2>
+          <div className={style.wrapper}>
+            <IMG
+              src={img} alt="Видеоконсультации"
+              className={style.img}
+            />
+            <div className={style.subwrapper}>
+              <p className={style.title}>Консультации по безопасному видеочату</p>
+              <p className={style.text}>На нашей платформе видеоконсультации проходят
+                в защищенном личном кабинете. Конфиденциальные сессии с вашим психологом доступны из любой точки мира.</p>
+              <Button className='circle_previous' disabled></Button>
+              <Button className='circle'></Button>
+            </div>
           </div>
-          <Button className={`light ${style.button}`} disabled></Button>
-          <Button className={`light ${style.button}`}></Button>
-
+          <div className={style.button}>
+            <Button className='dark'>Подобрать психолога сейчас</Button>
+          </div>
+          <p className={style.subtext}>Всё легко и просто!</p>
         </div>
-        <Button className='dark'>Подобрать психолога сейчас</Button>
-        <p className={style.subtext}>Всё легко и просто!</p>
       </Container>
     </section>
   )

@@ -43,7 +43,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  children: 'Кнопка',
+  children: '',
   onClick: () => { },
   className: '',
   disabled: false,
