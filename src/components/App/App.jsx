@@ -11,6 +11,11 @@ function App() {
 
   const handleOpen = () => {
     setIsOpened(!isOpened);
+    if (isOpened) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
   };
   return (
     <div className={style.app}>

@@ -1,30 +1,18 @@
 @import '../../../variables/variables.scss';
 
 .navbar {
+  display: none;
   width: 100%;
   position: absolute;
-  height: 99.9%;
+  height: 100%;
   transition: all 0.5s ease-in-out;
-  transform: translateX(100%);
+  transform: translateY(100%);
   border: none;
   background-color: #e5e5e5;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.logoText {
-  @extend %fonts;
-  @extend %fz-24-14;
-  font-weight: 600;
-  line-height: 98.51%;
-  align-self: center;
-  text-align: center;
-  letter-spacing: 0.035em;
-  color: $secondaryColor;
-  background-color: #fdfdfd;
+  z-index: 1;
+  @media screen and (max-width: $_1024) {
+    display: block;
+  }
 }
 
 .psyco {
@@ -99,53 +87,33 @@
   background-color: #fdfdfd;
 }
 
-.logo {
-  margin-right: calc(12px + 25 * ((100vw - 320px) / 700));
-}
-
 .navbarIsOpened {
   flex-direction: column;
   position: absolute;
   background-color: #fff;
-  transform: translateX(0);
-  z-index: 114;
+  transform: translateY(0);
+  z-index: 1;
 }
 
 .navbarIsClosed {
   background-color: #fff;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
   transition: transform 1s ease-in-out;
-  z-index: 114;
+  z-index: 1;
 }
 
 .navbarList {
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: calc(5px + 15 * ((100vw - 320px) / 700));
   align-items: center;
   background-color: #fdfdfd;
-}
-
-.navbarClose {
-  background-image: url('./images/Close.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  width: 35px;
-  height: 30px;
-  background-size: cover;
-  align-self: center;
-  margin-top: calc(24px + 50 * ((100vw - 320px) / 700));
-  margin-bottom: calc(0px + 30 * ((100vw - 320px) / 700));
-  margin-right: calc(15px + 60 * ((100vw - 320px) / 700));
-  cursor: pointer;
-  opacity: 0.7;
-}
-
-.navbarClose:hover {
-  opacity: 0.5;
-  transition: 0.4s;
+  a {
+    box-shadow: 20px 20px 200px rgba(240, 240, 240, 0.48);
+  }
+  button {
+    box-shadow: 20px 20px 200px rgba(240, 240, 240, 0.48);
+  }
 }
