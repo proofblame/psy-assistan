@@ -133,4 +133,5 @@
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
+  margin-bottom: calc(50px + 150 * ((100vw - 320px) / 1556));
 }
