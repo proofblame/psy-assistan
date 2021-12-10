@@ -1,0 +1,7 @@
+@import '../../variables/variables.scss';
+
+.wrap {
+  width: 100%;
+  max-width: $maxWidth + px;
+  margin: 0 auto;
+}

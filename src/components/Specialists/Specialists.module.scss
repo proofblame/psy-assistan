@@ -1,5 +1,10 @@
 @import '../../variables/variables.scss';
 
+.specialists {
+  background-color: $backgroundListColor;
+  width: 100%;
+}
+
 %listItem {
   content: '';
   position: absolute;
@@ -11,6 +16,7 @@
 
 .headerWrapper {
   @include adaptivePadding(margin, 150, 0, 50, 0);
+  width: 100%;
 }
 
 .header {
@@ -43,6 +49,11 @@
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .text {
@@ -112,4 +123,15 @@
   @extend %fonts;
   @extend %fz-24-12;
   margin-bottom: calc(30px + 102 * ((100vw - 320px) / 1556));
+}
+
+.confidential {
+  font-family: NexaScript, Arial sans-serif;
+  @include adaptivePadding(margin, 50, 0, 15, 0);
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  @extend %fz-30;
+  letter-spacing: 0.1em;
+  color: #2b6684;
 }

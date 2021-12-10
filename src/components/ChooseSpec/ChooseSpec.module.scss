@@ -1,0 +1,94 @@
+@import '../../variables/variables.scss';
+
+.background {
+  background-image: url(../../images/Lady.svg);
+  background-size: cover;
+  width: 100%;
+  @include adaptive(height, 960, 201);
+  // margin-top: calc(128px + 150 * ((100vw - 320px) / 1556));
+}
+
+.spec {
+  width: 100%;
+  position: relative;
+  @include adaptive(height, 1356, 377);
+}
+
+.backgroundLine {
+  background-color: $mainColor;
+  width: 100%;
+  // @include adaptive(width, 1920, 320);
+  @include adaptive(height, 312, 102);
+  position: relative;
+  background-image: url('../../images/Vector190.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.headerWrap {
+  margin-top: calc(50px + 195 * ((100vw - 320px) / 1556));
+  padding-bottom: calc(88px + 469 * ((100vw - 320px) / 1556));
+  margin-left: calc(21px + 46 * ((100vw - 320px) / 1556));
+  // display: flex;
+  // flex-direction: column;
+}
+
+.headerMain {
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  color: #2b6684;
+  text-align: left;
+  @include adaptive(width, 862, 262);
+  margin: 0;
+}
+
+.subheader {
+  @extend %fonts;
+  @extend %fz-36-40-18;
+  @include adaptive(width, 670, 242);
+  color: $secondaryColor;
+  margin-top: calc(14px + 30 * ((100vw - 320px) / 1556));
+}
+
+.text {
+  margin-left: calc(0px + 46 * ((100vw - 320px) / 1556));
+  @include adaptive(width, 172, 107);
+  @include adaptive(height, 68, 11);
+  @extend %fz-36-12;
+  letter-spacing: 0.1em;
+  color: $mainColor;
+  font-family: NexaScript, Arial sans-serif;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  margin-top: calc(10px + 50 * ((100vw - 320px) / 1556));
+  position: absolute;
+  @media screen and (max-width: 700px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.info {
+  @include adaptive(width, 560, 132);
+  @include adaptive(height, 179, 57);
+  @extend %fz-48-14;
+  background-color: $secondaryColor;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: calc(13px + 90 * ((100vw - 320px) / 1556));
+}
+
+.infoSub {
+  @extend %fz-24-8;
+  margin-top: calc(4px + 15 * ((100vw - 320px) / 1556));
+}

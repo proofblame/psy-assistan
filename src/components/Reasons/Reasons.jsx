@@ -11,13 +11,13 @@ import H2 from '../../UI/H2/H2';
 import Li from '../../UI/UL/Li/Li';
 import UL from '../../UI/UL/UL';
 import IMG from '../../UI/IMG/IMG';
-import Container from '../../UI/Container/Container';
 import Button from '../../UI/Button/Button';
+import Wrap from '../../UI/Wrap/Wrap';
 
 const Reasons = () => {
   return (
-    <section className='reasons'>
-      <Container>
+    <section className={reasons.reasons}>
+      <Wrap>
         <H2 className={reasons.header}>
           Регулярные сессии с психологом повышают качество жизни
         </H2>
@@ -98,8 +98,10 @@ const Reasons = () => {
           </UL>
         </div>
         <p className={reasons.improve}>Измени жизнь к лучшему!</p>
-        <Button className={reasons.button}>Хочу обсудить свою ситуацию</Button>
-      </Container>
+        <div className={reasons.buttonWrapper}>
+          <Button className='dark'>Хочу обсудить свою ситуацию</Button>
+        </div>
+      </Wrap>
     </section>
   );
 };

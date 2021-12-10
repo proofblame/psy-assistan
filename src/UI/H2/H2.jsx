@@ -4,7 +4,6 @@ import style from './H2.module.scss';
 
 const Header = ({ children, className }) => {
   const classes = classNames(style.header, className);
-
   return <h2 className={classes}>{children}</h2>;
 };
 
