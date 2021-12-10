@@ -181,4 +181,12 @@
   border: none;
   outline: none;
   color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.5s;
+    background-color: #fff;
+    opacity: 0.7;
+    color: $mainColor;
+  }
 }
