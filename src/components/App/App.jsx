@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Main from '../../pages/Main/Main';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Navbar from '../Header/Navbar/NavBar';
 import style from './App.module.scss';
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
