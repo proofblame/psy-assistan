@@ -1,7 +1,9 @@
 @import '../../../variables/variables.scss';
 
-.reasons {
-  padding: calc(100px + 154 * ((100vw - 320px) / 1556)) 0;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .list {
@@ -24,18 +26,17 @@
 }
 
 .header {
-  text-align: center;
-  margin: 0 auto;
   @extend %fz-64-18;
   @extend %fonts;
-  @include adaptive(width, 1254, 278);
+  @include adaptive(margin-bottom, 248, 98);
 }
 
 .item {
   @include adaptive(width, 451, 229);
   @include adaptive(height, 273, 139);
   @extend %fz-18;
-  margin: 0 auto;
+  @include adaptivePadding(padding, 0, 53, 0, 27);
+  @include adaptive(padding-top, 143, 73);
   background-color: $backgroundListColor;
 }
 
@@ -88,7 +89,6 @@
 }
 
 .text {
-  @include adaptivePadding(margin, 143, 53, 73, 27);
   text-align: center;
   @extend %fonts;
   @extend %fz-24;
@@ -98,20 +98,15 @@
 }
 
 .wrapper {
-  margin-top: calc(100px + 255 * ((100vw - 320px) / 1556));
-  margin-bottom: calc(50px + 150 * ((100vw - 320px) / 1556));
+  @include adaptive(margin-bottom, 150, 50);
   display: flex;
-  justify-content: center;
-}
-
-.buttonWrapper {
-  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .improve {
   text-align: center;
-  @include adaptivePadding(margin, 50, 0, 15, 0);
+  @include adaptive(margin-bottom, 50, 15);
   color: $mainColor;
   position: relative;
   font-family: $font_Nexa;
@@ -138,18 +133,4 @@
     object-fit: cover;
     background-repeat: no-repeat;
   }
-}
-
-.button {
-  background: $mainColor;
-  @include adaptive(width, 584, 227);
-  @include adaptive(height, 116, 43);
-  @extend %fz-24-12;
-  color: #fff;
-  border: none;
-  outline: none;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin-bottom: calc(50px + 150 * ((100vw - 320px) / 1556));
 }
