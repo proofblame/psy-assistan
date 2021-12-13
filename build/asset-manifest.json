@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1c50f426.chunk.css",
+    "main.js": "/static/js/main.f82db5f5.chunk.js",
+    "main.js.map": "/static/js/main.f82db5f5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d3661648.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d3661648.js.map",
+    "static/js/2.3f33e27f.chunk.js": "/static/js/2.3f33e27f.chunk.js",
+    "static/js/2.3f33e27f.chunk.js.map": "/static/js/2.3f33e27f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.1c50f426.chunk.css.map": "/static/css/main.1c50f426.chunk.css.map",
+    "static/js/2.3f33e27f.chunk.js.LICENSE.txt": "/static/js/2.3f33e27f.chunk.js.LICENSE.txt",
+    "static/media/Calm.77c12082.svg": "/static/media/Calm.77c12082.svg",
+    "static/media/Specialists.module.scss": "/static/media/Study.643d1a18.svg",
+    "static/media/Energy.96db095e.svg": "/static/media/Energy.96db095e.svg",
+    "static/media/Facebook.4dfc776f.svg": "/static/media/Facebook.4dfc776f.svg",
+    "static/media/Favourite.0fa18453.svg": "/static/media/Favourite.0fa18453.svg",
+    "static/media/ChooseSpec.module.scss": "/static/media/Lady-2.91a41951.svg",
+    "static/media/Footer.module.scss": "/static/media/Like.9ef8a41d.svg",
+    "static/media/Navbar.module.scss": "/static/media/Lock.df7ea993.svg",
+    "static/media/Logo.54cf5539.svg": "/static/media/Logo.54cf5539.svg",
+    "static/media/index.css": "/static/media/roboto-v29-latin_cyrillic-regular.91f689ac.woff2",
+    "static/media/Reasons.module.scss": "/static/media/Pseudo.e8ec4003.svg",
+    "static/media/Relations.b110fee1.svg": "/static/media/Relations.b110fee1.svg",
+    "static/media/SayNo.817fe605.svg": "/static/media/SayNo.817fe605.svg",
+    "static/media/SelfEstimation.c2a3ea86.svg": "/static/media/SelfEstimation.c2a3ea86.svg",
+    "static/media/Specialist.73073eb5.svg": "/static/media/Specialist.73073eb5.svg",
+    "static/media/Telegram.9125d5c6.svg": "/static/media/Telegram.9125d5c6.svg",
+    "static/media/Whatsup.3cd85aee.svg": "/static/media/Whatsup.3cd85aee.svg",
+    "static/media/aboutService-1.e5b78052.svg": "/static/media/aboutService-1.e5b78052.svg",
+    "static/media/Button.module.scss": "/static/media/arrow.52cc37b9.svg",
+    "static/media/СhoiceSpecialist.module.scss": "/static/media/markActive.d44ae9c6.svg",
+    "static/media/statistics.6b4077a6.svg": "/static/media/statistics.6b4077a6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3661648.js",
+    "static/js/2.3f33e27f.chunk.js",
+    "static/css/main.1c50f426.chunk.css",
+    "static/js/main.f82db5f5.chunk.js"
+  ]
+}
